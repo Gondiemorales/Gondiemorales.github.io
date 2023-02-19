@@ -2,19 +2,40 @@
 <html>
   <head>
     <title>Segunda pagina</title>
+    <style>
+      .lbl{
+        font-weight: bold;
+        
+        padding: 5% 10%;
+      } 
+      .inp{
+        font-weight: bold;
+        
+        padding: 1% 8%;
+      }
+      .img{
+        padding:  0% 25%;
+        width: 50%;
+        height: 50%;
+        border: 2% solid blue;
+        border-radius: 70%;
+        box-shadow: 2% 2% 2% gray;
+
+      }      
+    </style>
   </head>
   <body>
     <p>Suscribete</p>
      <form action="https://example.com/submit-form" method="post">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre"><br><br>
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email"><br><br>
+      <label class="lbl" for="nombre">Nombre:</label>
+      <input class="inp" type="text" id="nombre" name="nombre"><br><br>
+      <label class="lbl" for="email">Correo electrónico:</label>
+      <input class="inp" type="email" id="email" name="email"><br><br>
       <input type="submit" value="Enviar">
     </form>
     <p>
 
-      <img src="https://img.fotocommunity.com/herbst-auf-senja-b78534db-8b2f-499f-b7a4-ea487ac6d72b.jpg?height=1080" alt="Mi imagen" height="200" width="400">
+      <img class="img" src="https://img.fotocommunity.com/herbst-auf-senja-b78534db-8b2f-499f-b7a4-ea487ac6d72b.jpg?height=1080" alt="Mi imagen" height="200" width="400">
 
 
      <p>
