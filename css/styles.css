@@ -77,6 +77,68 @@
 }
 
 
+nav {
+          background-color: #333;
+          color: #fff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+          width: 4em;
+          height: auto;
+        }
+
+        .Nombre{
+          font-size: 2.5em;
+          margin-left: -12em;
+        }
+
+        nav ul {
+          display: flex;
+          list-style: none;
+          margin-right: -25em;
+          padding: 0;
+        }
+
+        nav li {
+          margin: 0 10px;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+
+        .cta {
+          margin-right: 20px;
+        }
+
+
+        .btn {
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+          background-color: #ff9900;
+          color: #fff;
+        }
+
+        .btn-primary:hover {
+          background-color: #ffcc66;
+        }
+
 
 body {
   margin: 0;

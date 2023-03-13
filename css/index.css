@@ -4,67 +4,76 @@
     box-sizing: border-box;
 }
 
-header {
-          background-color: #333;
-          color: #fff;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        .logo img {
-          width: 4em;
-          height: auto;
-        }
+.logo img {
+  width: 4em;
+  height: auto;
+}
 
-        .Nombre{
-          font-size: 2.5em;
-          margin-left: -12em;
-        }
+.Nombre {
+  font-size: 2.5em;
+  flex-grow: 1;
+  text-align: center;
+}
 
-        nav ul {
-          display: flex;
-          list-style: none;
-          margin-right: -25em;
-          padding: 0;
-        }
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
 
-        nav li {
-          margin: 0 10px;
-        }
+nav li {
+  margin: 0 10px;
+}
 
-        nav a {
-          color: #fff;
-          text-decoration: none;
-          text-transform: uppercase;
-        }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
-        .cta {
-          margin-right: 20px;
-        }
+.cta {
+  margin-right: 20px;
+}
 
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
 
-        .btn {
-          display: inline-block;
-          padding: 10px 20px;
-          border-radius: 5px;
-          font-size: 16px;
-          font-weight: bold;
-          text-transform: uppercase;
-          text-decoration: none;
-          transition: background-color 0.2s;
-        }
+.btn-primary {
+  background-color: #ff9900;
+  color: #fff;
+}
 
-        .btn-primary {
-          background-color: #ff9900;
-          color: #fff;
-        }
+.btn-primary:hover {
+  background-color: #ffcc66;
+}
 
-        .btn-primary:hover {
-          background-color: #ffcc66;
-        }
+@media screen and (max-width: 768px) {
+  nav ul {
+    margin-right: 0;
+  }
+  
+  .cta {
+    display: none;
+  }
+}
 
       .global {
         width: 100%; /* establece el ancho del contenedor */
