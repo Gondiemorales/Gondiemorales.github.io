@@ -89,7 +89,7 @@ function mostrarInformacionAdicional(contenedor, pokemon) {
   contenedor.innerHTML = '';
 
   const height = document.createElement('p');
-  height.textContent = 'Altura: ' + pokemon.height;
+  height.textContent = 'Altura: ' + pokemon.height + "0";
 
   const habilidades = document.createElement('p');
   habilidades.textContent = "Habilidades: ";
