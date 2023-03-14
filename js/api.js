@@ -39,11 +39,20 @@ function crearPokemon(pokemon){
 
   const img = document.createElement('img');
   img.src = pokemon.sprites.front_default;
-  console.log(img);
+  img.addEventListener('click', () => cambiarImagen(img, pokemon.sprites.back_default, pokemon.sprites.front_default));
+
+  img.addEventListener("mouseover", () => {
+    img.style.cursor = "pointer";
+  });
+
+  img.addEventListener("mouseout", () => {
+    img.style.cursor = "default";
+  });
+  
 
   const nombre = document.createElement('h3');
   nombre.textContent = pokemon.name;
-  console.log(nombre);
+  
 
   const div1 = document.createElement('div');
   div1.classList.add('pokemon');
@@ -57,6 +66,7 @@ function crearPokemon(pokemon){
 
   const btnMostrarInfo = document.createElement('button');
   btnMostrarInfo.textContent = 'Mostrar información adicional';
+  btnMostrarInfo.classList.add('boton-info');
   btnMostrarInfo.addEventListener('click', () => mostrarInformacionAdicional(div2, pokemon));
 
 
@@ -94,6 +104,7 @@ function mostrarInformacionAdicional(contenedor, pokemon) {
 
   const btnOcultarInfo = document.createElement('button');
   btnOcultarInfo.textContent = 'Ocultar información adicional';
+  btnOcultarInfo.classList.add('boton-info');
   btnOcultarInfo.addEventListener('click', () => ocultarInformacionAdicional(contenedor));
 
   contenedor.appendChild(height);
@@ -106,5 +117,13 @@ function mostrarInformacionAdicional(contenedor, pokemon) {
 
 function ocultarInformacionAdicional(contenedor) {
   contenedor.style.display = 'none';
+}
+
+function cambiarImagen(img, imagenFrontalUrl, imagenTraseraUrl) {
+  if (img.src === imagenFrontalUrl) {
+    img.src = imagenTraseraUrl;
+  } else {
+    img.src = imagenFrontalUrl;
+  }
 }
 
