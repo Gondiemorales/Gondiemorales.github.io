@@ -30,6 +30,7 @@ function getPokemon(pokemon){
   .then( res => res.json())
   .then( datos => {
     crearPokemon(datos);
+    console.log(datos);
   });
 }
 
@@ -45,10 +46,65 @@ function crearPokemon(pokemon){
   console.log(nombre);
 
   const div1 = document.createElement('div');
+  div1.classList.add('pokemon');
+
+  const div2 = document.createElement('div');
+  div2.classList.add('pokemon-info');
+  div2.style.display = 'none';
+  div2.style.flexDirection = 'column';
+
+
+
+  const btnMostrarInfo = document.createElement('button');
+  btnMostrarInfo.textContent = 'Mostrar información adicional';
+  btnMostrarInfo.addEventListener('click', () => mostrarInformacionAdicional(div2, pokemon));
+
+
+
+
+
   div1.appendChild(img);
   div1.appendChild(nombre);
+  div1.appendChild(btnMostrarInfo);
+  div1.appendChild(div2);
+
 
   pokemonContainer.appendChild(div1);
 
+
+}
+
+function mostrarInformacionAdicional(contenedor, pokemon) {
+
+  contenedor.innerHTML = '';
+
+  const height = document.createElement('p');
+  height.textContent = 'Altura: ' + pokemon.height;
+
+  const habilidades = document.createElement('p');
+  habilidades.textContent = "Habilidades: ";
+  const habilidadeslista = pokemon.abilities;
+  for (let i = 0; i < habilidadeslista.length; i++) {
+    const habilidad = habilidadeslista[i].ability;
+    const nombreHabilidad = habilidad.name;
+    habilidades.textContent += nombreHabilidad + " ";}
+
+  const xp = document.createElement('p');
+  xp.textContent = 'Xp: ' + pokemon.base_experience;
+
+  const btnOcultarInfo = document.createElement('button');
+  btnOcultarInfo.textContent = 'Ocultar información adicional';
+  btnOcultarInfo.addEventListener('click', () => ocultarInformacionAdicional(contenedor));
+
+  contenedor.appendChild(height);
+  contenedor.appendChild(habilidades);
+  contenedor.appendChild(xp);
+  contenedor.appendChild(btnOcultarInfo);
+
+  contenedor.style.display = 'block';
+}
+
+function ocultarInformacionAdicional(contenedor) {
+  contenedor.style.display = 'none';
 }
 
